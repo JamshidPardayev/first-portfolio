@@ -1,0 +1,101 @@
+.project{
+    .project-title{
+        h2{
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 26px;
+            text-align: center;
+            color: $grey;
+            margin-top: 150px;
+        }
+        p{
+            font-size: 32px;
+            font-weight: 400;
+            line-height: 26px;
+            text-align: center;
+            color: $lessgrey;
+            margin-top: 50px;
+        }
+    }
+    .my-projects{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        justify-content: center;
+        margin-top: 100px;
+        column-gap: 40px;
+        row-gap: 60px;
+    }
+    .project-cart{
+        max-width: 375px;
+        min-height: 567px;
+        border-radius: 20px;
+        background-color: #363636;
+    }
+    .project-img{
+        max-width: 375px;
+        height: 260px;
+        border-radius: 20px 20px 0px 0px;
+        img{
+        border-radius: 20px 20px 0px 0px;
+        }
+    }
+    .project-cart-title{
+        padding: 30px;
+        h3{
+            font-size: 26px;
+            font-weight: 500;
+            line-height: 26px;
+            color: $grey;
+        }
+        p{
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 26px;
+            color: $lessgrey;
+            margin: 17px 0;
+            &:nth-of-type(2){
+                font-size: 13px;
+                font-weight: 400;
+                line-height: 26px;
+            }
+        }
+    }
+
+    .project-link{
+        display: flex;
+        justify-content: space-between;
+    }
+    .for-link{
+        display: flex;
+        align-items: center;
+        img{
+            height: 20px;
+            width: 20px;
+        }
+        a{
+            text-decoration: underline;
+            color: $white;
+            &:hover{
+                color: $pink;
+                transition: 0.5s;
+                cursor: pointer;
+            }
+        }
+        p{
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 26px;
+            margin-left: 5px;
+            text-decoration: dashed;
+            color: $white;
+            &:hover{
+                background: linear-gradient(to right,$pink, $aqua);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                transition: 0.5s;
+                cursor: pointer;
+            }
+        }
+    }
+}

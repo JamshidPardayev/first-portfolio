@@ -1,0 +1,114 @@
+@media screen and (max-width: 992px){
+    .project{
+        .my-projects{
+            grid-template-columns: auto auto;
+        }
+    }
+    footer{
+        .footer-title{
+            flex-direction: column;
+            align-items: center;
+        }
+        .footer-nav{
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+    }
+}
+
+
+@media screen and (max-width: 768px){
+    header{
+        .header-nav{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .header-icons{
+            margin-top: 30px;
+            i{
+                margin: 0 20px;
+            }
+        }
+        .header-hero{
+            flex-direction: column-reverse;
+            align-items: center;
+            text-align: center;
+            margin: 100px;
+            h1{
+                margin-top: 30px;
+                font-size: 45px;
+                width: 400px;
+            }
+        }
+    }
+    .project-link{
+        flex-direction: column;
+    }
+    footer{
+        .footer-top{
+            flex-direction: column;
+        }
+        .footer-icons{
+            margin: 30px 0;
+        }
+        
+        .footer-nav{
+            text-align: center;
+            nav{
+                margin: 20px 0;
+                ul{
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px){
+    .project{
+        .my-projects{
+            grid-template-columns: auto;
+        }
+    }
+}
+
+@media screen and (max-width: 468px){
+    header{
+        .header-nav{
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .header-menu{
+            display: flex;
+            i{
+                font-size: 32px;
+                color: $grey;
+                &:hover{
+                    color: $blue;
+                    transition: 0.5s;
+                    cursor: pointer;
+                }
+            }
+        }
+        nav{
+            display: none;
+        }
+        .header-icons{
+            display: none;
+        }
+        .header-hero{
+            h1{
+                margin-top: 30px;
+                font-size: 32px;
+                width: 280px;
+                line-height: 50px;
+            }
+            .header-img{
+                width: 250px;
+                height: 250px;
+            }
+        }
+    }
+}

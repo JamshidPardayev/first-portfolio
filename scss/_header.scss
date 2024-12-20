@@ -1,0 +1,88 @@
+header{
+    width: 100%;
+    .header-nav{
+        min-height: 100px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .header-menu{
+        display: none;
+    }
+
+    .logo{
+        height: 100px;
+    }
+
+    nav{
+        ul{
+            display: flex;
+            gap: 40px;
+            height: 100%;
+            a{
+                color: $lessgrey;
+                &:hover{
+                    background: linear-gradient(to right,$pink, $aqua);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    transition: 0.5s;
+                    cursor: pointer;
+                    
+                }
+            }
+        }
+    }
+    .header-icons{
+        i{
+            font-size: 30px;
+            color: $grey;
+            margin-left: 20px;
+            &:hover{
+                background: linear-gradient(to right,$aqua, $pink);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                transition: 0.5s;
+                cursor: pointer;
+            }
+        }
+    }
+    .header-hero{
+        max-width: 1204px;
+        min-height: 350px;
+        margin-top: 220px;
+        display: flex;
+        justify-content: space-between;
+        h1{
+            font-size: 58px;
+            font-weight: 700;
+            line-height: 70px;
+            letter-spacing: -1px;
+            max-width: 636px;
+            span{
+                background: linear-gradient(to right, $aqua, $pink);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+
+
+            }
+        }
+        .header-img{
+            height: 350px;
+            width: 350px;
+            border: 5px solid;
+            border-top-color: blueviolet;
+            border-right-color: yellow;
+            border-left-color: blue;
+            border-bottom-color: red;
+            border-radius: 50%;
+            img{
+                border-radius: 50%;
+            }
+        }
+           
+    }
+}
