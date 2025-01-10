@@ -93,18 +93,86 @@ header .header-hero h1 span {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+header .header-hero .anim-p {
+  position: relative;
+  min-height: 120px;
+  overflow: hidden;
+}
+header .header-hero .anim-p p {
+  position: absolute;
+  font-size: 36px;
+  margin-top: 20px;
+  min-height: 60px;
+  width: 100%;
+  z-index: 0;
+}
+header .header-hero .anim-p .aaa {
+  animation-name: anime-p;
+  animation-iteration-count: infinite;
+  animation-duration: 4s;
+  animation-delay: 1s;
+  animation-timing-function: ease-out;
+  width: 100%;
+  position: absolute;
+  height: 120px;
+  margin-top: 20px;
+  z-index: 1;
+  background: black;
+}
+@keyframes anime-p {
+  to {
+    transform: translate(400px);
+  }
+}
 header .header-hero .header-img {
-  height: 350px;
-  width: 350px;
-  border: 5px solid;
-  border-top-color: blueviolet;
-  border-right-color: yellow;
-  border-left-color: blue;
-  border-bottom-color: red;
-  border-radius: 50%;
+  position: relative;
+  height: 455px;
+  width: 355px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 11%;
+  z-index: 10;
+  overflow: hidden;
 }
 header .header-hero .header-img img {
-  border-radius: 50%;
+  width: 97%;
+  height: 97%;
+  border-radius: 10%;
+  z-index: 1;
+}
+header .header-hero .header-img::before {
+  content: "";
+  position: absolute;
+  left: -60%;
+  top: -30%;
+  width: 800px;
+  height: 800px;
+  background-image: linear-gradient(360deg, red, blue, fuchsia);
+  z-index: -1;
+  animation: borA 3s linear infinite;
+  transition: all 0.2s linear;
+}
+@keyframes borA {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+header .about {
+  text-align: center;
+}
+header .about h2 {
+  font-size: 36px;
+  margin-top: 80px;
+}
+header .about p {
+  max-width: 800px;
+  margin: 30px auto;
+  line-height: 30px;
+  padding: 0px 15px;
 }
 
 .tech {
@@ -183,6 +251,10 @@ header .header-hero .header-img img {
   min-height: 567px;
   border-radius: 20px;
   background-color: #363636;
+}
+.project .project-cart:hover {
+  cursor: pointer;
+  transform: scale(1.05);
 }
 .project .project-img {
   max-width: 375px;

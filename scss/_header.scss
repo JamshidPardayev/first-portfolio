@@ -70,19 +70,89 @@ header{
 
             }
         }
-        .header-img{
-            height: 350px;
-            width: 350px;
-            border: 5px solid;
-            border-top-color: blueviolet;
-            border-right-color: yellow;
-            border-left-color: blue;
-            border-bottom-color: red;
-            border-radius: 50%;
-            img{
-                border-radius: 50%;
+        .anim-p{
+            position: relative;
+            min-height: 120px;
+            overflow: hidden;
+            p{
+                position: absolute;
+                font-size: 36px;
+                margin-top: 20px;
+                min-height: 60px;
+                width: 100%;
+                z-index: 0;
+            }
+            .aaa{
+                animation-name: anime-p;
+                animation-iteration-count: infinite;
+                animation-duration: 4s;
+                animation-delay: 1s;
+                animation-timing-function: ease-out;
+                width: 100%;
+                position: absolute;
+                height: 120px;
+                margin-top: 20px;
+                z-index: 1;
+                background: black;
+            }
+            @keyframes anime-p {
+                to{
+                    transform: translate(400px);
+                }
             }
         }
-           
+        
+        .header-img{
+            position: relative;
+            height: 455px;
+            width: 355px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 11%;
+            z-index: 10;
+            overflow: hidden;
+            img{
+                
+                width: 97%;
+                height: 97%;
+                border-radius: 10%;
+                z-index: 1;
+            }
+        }
+        .header-img::before{
+            content: "";
+            position: absolute;
+            left: -60%;
+            top: -30%;
+            width: 800px;
+            height: 800px;
+            background-image: linear-gradient(360deg, red, blue, fuchsia);
+            z-index: -1;
+            animation: borA 3s linear infinite;
+            transition: all .2s linear;
+        }
+        @keyframes borA {
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }  
+    }
+    .about{
+        text-align: center;
+        h2{
+            font-size: 36px;
+            margin-top: 80px;
+        }
+        p{
+
+            max-width: 800px;
+            margin: 30px auto;
+            line-height: 30px;
+            padding: 0px 15px;
+        }
     }
 }
