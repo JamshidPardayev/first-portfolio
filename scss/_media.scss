@@ -2,6 +2,7 @@
     .project{
         .my-projects{
             grid-template-columns: auto auto;
+            margin-top: 150px;
         }
     }
     footer{
@@ -70,6 +71,26 @@
     .project{
         .my-projects{
             grid-template-columns: auto;
+        }
+        .my-projects .project-cart:hover{
+            filter: brightness(1);
+            transform: translateZ(20px);
+        }
+        .my-projects .project-cart:hover + *{
+            filter: brightness(.6);
+            transform: translateZ(20px) rotateY(10deg);
+        }
+        .my-projects .project-cart:hover + * + *{
+            filter: brightness(.4);
+            transform: translateZ(20px) rotateY(10deg);
+        }
+        .my-projects .project-cart:has(+ *:hover){
+            filter: brightness(.6);
+            transform: translateZ(20px) rotateY(-10deg);
+        }
+        .my-projects .project-cart:has(+ * + *:hover){
+            filter: brightness(.4);
+            transform: translateZ(20px) rotateY(-10deg);
         }
     }
 }
